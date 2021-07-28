@@ -1,0 +1,185 @@
+.instagram-header-wrapper,
+.instagram-navigation,
+.nav--user-control,
+.nav-input-search {
+  display: flex;
+}
+.instagram-header-wrapper {
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  z-index: 3;
+}
+.instagram-navigation {
+  width: 1000px;
+  padding: 10px 20px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.instagram-title {
+  font-size: 35px;
+  font-family: "Cookie", cursive;
+  font-weight: inherit;
+  color: #000000;
+}
+.nav-input-search {
+  position: relative;
+  width: 215px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.019);
+  text-align: center;
+}
+.nav-input-search .icon-search {
+  font-size: 18px;
+  opacity: 0.4;
+  transform: rotate(81deg);
+}
+
+.nav-input-search .input-search {
+  border: none;
+  background: none;
+  width: 50px;
+  height: 100%;
+  margin-left: 5px;
+  outline: none;
+}
+.nav-input-search .input-search.max-input-search {
+  width: auto;
+}
+.nav--user-control {
+  justify-content: center;
+  align-items: center;
+}
+.nav-user-control-img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.user--icon-control {
+  /* width: 50px;
+  height: 50px; */
+  font-size: 28px;
+  margin: 0px 11px;
+  cursor: pointer;
+}
+.user--icon-control.font-size-diff {
+  font-size: 26px;
+}
+.nav-user-control-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+}
+.expand-controls-user {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  min-width: 245px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.expand-controls-user.expand-actived {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: unset;
+  top: 43px;
+}
+.expand-controls-user::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 37px;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.expand-controls-user::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 37px;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  background: #ffffff;
+  transform: rotate(45deg);
+}
+.expand-controls-option {
+  display: flex;
+  align-items: center;
+  padding: 13px 20px;
+  color: #000000;
+  z-index: 2;
+}
+.expand-controls-option:hover {
+  background: rgba(0, 0, 0, 0.027);
+}
+.expand-controls-option.logOut-user {
+  font-size: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.controls-option-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.controls-option-txt {
+  font-size: 14px;
+}
+.cursor--overlay-show-control {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: none;
+  z-index: -10;
+}
+
+.cursor--overlay-show-control.overlay-actived {
+  position: fixed;
+  background: transparent;
+  z-index: 1;
+}
+/* MEDIA QUERY */
+@media (max-width: 1050px) {
+  .expand-controls-user {
+    right: -10px;
+  }
+  .expand-controls-user::before,
+  .expand-controls-user::after {
+    right: 16px;
+  }
+}
+@media (max-width: 656px) {
+  .nav-input-search {
+    display: none;
+  }
+}
+@media (max-width: 433px) {
+  .hidden-responsive {
+    display: none;
+  }
+}

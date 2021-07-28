@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+div#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main-feed-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: #fafafa;
+}
+.feed-board-content {
+  position: relative;
+  max-width: 1000px;
+  min-width: 319px;
+  padding: 0px 20px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* MEDIA QUERY */
+@media (max-width: 1024px) {
+  .feed-board-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 660px) {
+  .feed-board-content {
+    padding: 0;
+  }
+  .main-feed-wrapper {
+    padding: 2px;
+  }
+}
