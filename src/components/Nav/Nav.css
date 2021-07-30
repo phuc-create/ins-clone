@@ -13,6 +13,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background: #ffffff;
   z-index: 3;
+  user-select: none;
 }
 .instagram-navigation {
   width: 1000px;
@@ -56,6 +57,11 @@
   width: auto;
 }
 .nav--user-control {
+  justify-content: center;
+  align-items: center;
+}
+.--user-control-link {
+  display: flex;
   justify-content: center;
   align-items: center;
 }

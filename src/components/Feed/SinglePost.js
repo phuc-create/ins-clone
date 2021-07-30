@@ -35,7 +35,6 @@ const SinglePost = () => {
     };
     setArraySlide();
   }, [imgSlide.length]);
-  console.log(imgSlide.length);
   const runSlide = (option) => {
     if (option === "prev") {
       setSlide((prev) => (prev - 1 <= 0 ? 1 : prev - 1));
@@ -51,7 +50,6 @@ const SinglePost = () => {
     }
   };
 
-  console.log(silde);
   return (
     <div className="user--single-post-play">
       <section className="--single-post-header">

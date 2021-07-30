@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import User from "../../img/user1.jpg";
 import User2 from "../../img/user2.jpg";
 import User4 from "../../img/user4.jpg";
@@ -7,12 +7,12 @@ import User7 from "../../img/user7.jpg";
 import "./SideUser.css";
 const SideUser = () => {
   const [left, setLeft] = useState((window.innerWidth - 960) / 2 + 645);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      let leftNow = window.innerWidth - ((window.innerWidth - 960) / 2 + 300);
-      setLeft(leftNow);
-    });
-  }, []);
+
+  window.addEventListener("resize", () => {
+    let leftNow = window.innerWidth - ((window.innerWidth - 960) / 2 + 300);
+    setLeft(leftNow);
+  });
+
   return (
     <div className="user-recommended-side" style={{ left: left }}>
       <div className="__top-side">
